@@ -1,37 +1,44 @@
-require "open-uri"
-require "nokogiri"
-
-
 
 class BestCars::CLI
-
-	
 
 
 	def call
 		# puts title
-		# puts "10 Best Cars:"
-		puts "\n"
-		# list_cars
-		menu
-		# goodbye
+		
+
+# 		# puts "\n"
+		list_cars
+		# menu
+# 		# goodbye
+
 	end
 
-	def title
-		html = open('https://www.caranddriver.com/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature')
-		doc = Nokogiri::HTML(html)
-		doc.css(".mv1").text 
-	end
-
-	# def list_cars
+	# def title
 	# 	html = open('https://www.caranddriver.com/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature')
 	# 	doc = Nokogiri::HTML(html)
-	# 	# doc.css(".small-12").css("span").each do |car| puts car.text end
-	# 	# doc.css(".small-12").first.css("span").text
-	# 	# 2 doc.css(".small-12")[1].css("span").text
-	# 	puts title
-	# 	doc.css(".small-12").css("span").each do |car| puts car.text end
+	# 	doc.css(".mv1").text 
 	# end
+
+	def list_cars
+		puts "10 Best Cars:"
+		@cars = BestCars::Car.carList
+		@cars.each.with_index(1) do |car, i|
+			puts "#{i}. #{car.name}"
+		# puts <<-DOC
+		# 1. car_1 aoc
+		# 2. car_2 boc
+		# DOC
+		# html = open('https://www.caranddriver.com/features/2018-10best-cars-the-best-cars-for-sale-in-america-today-feature')
+		# doc = Nokogiri::HTML(html)
+		# # doc.css(".small-12").css("span").each do |car| puts car.text end
+		# # doc.css(".small-12").first.css("span").text
+		# # 2 doc.css(".small-12")[1].css("span").text
+		# puts title
+		# doc.css(".small-12").css("span").each do |car| puts car.text end
+		# @cars = BestCars::Car.carList
+		end
+	end
+
 
 	def menu
 		# puts "\n"
@@ -70,8 +77,11 @@ class BestCars::CLI
 		end
 	end
 
-	# def goodbye
-	#   puts "See you next time!"
-	# end
+# 	# def goodbye
+# 	#   puts "See you next time!"
+# 	# end
 
 end
+
+
+
