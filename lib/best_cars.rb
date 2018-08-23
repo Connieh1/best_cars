@@ -5,3 +5,4 @@ require_relative "./best_cars/version"
 # end
 
 require_relative './best_cars/cli'
+require_relative './best_cars/cars'
