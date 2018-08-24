@@ -2,13 +2,6 @@ class BestCars::Car
 		attr_accessor :name, :price, :engines, :transmission, :fuel_economy, :weight, :test_results, :url, :comp
 
 	def self.carList
-
-
-		# puts <<-DOC
-		# 1. car_1 aoc
-		# 2. car_2 boc
-		# DOC
-
 		self.scrape_cars
 	end
 

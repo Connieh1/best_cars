@@ -4,7 +4,9 @@ class BestCars::CLI
 
 	def call
 		puts "\n"
-		puts title
+		puts "Welcome to The 10 Best Cars of 2018!"
+		puts "\n"
+		puts "Title : #{title}"
 		puts "\n"
 		list_cars
 		menu
