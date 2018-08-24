@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Connie"]
   spec.email         = ["connie2630a@gmail.com"]
 
-  spec.summary       = "Best 10 Cars of 2018"
-  spec.description   = "Best 10 Cars of 2018"
+  spec.summary       = "Car and Driver's 10 Best Cars of 2018"
+  spec.description   = "Car and Driver's 10 Best Cars of 2018"
   spec.homepage      = "https://github.com/Connieh1/best_cars.git"
   spec.license       = "MIT"
 
