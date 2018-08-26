@@ -4,7 +4,7 @@ class BestCars::CLI
 
 	def call
 		puts "\n"
-		puts "Welcome to The 10 Best Cars of 2018 (as rated by Car and Driver!"
+		puts "Welcome to The 10 Best Cars of 2018 (as rated by Car and Driver)!"
 		puts "\n"
 		puts "Title : #{title}"
 		puts "\n"

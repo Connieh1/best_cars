@@ -1,0 +1,17 @@
+def my_languages(results)
+  # your code here
+  keys = []
+  results.collect do |key, value|
+  if value >= 60
+  key
+  
+  end
+  # if value >= 60
+  # arr << key
+  # end
+
+  
+  end
+end
+
+my_languages({"Java" => 10, "Ruby" => 80, "Python" => 65})
