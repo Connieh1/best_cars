@@ -5,7 +5,7 @@ class BestCars::Scraper
   end
 
   def scraped_cars
-    get_page.css(".small-12").css("span").text
+    get_page.css(".small-12")
   end
 
   
