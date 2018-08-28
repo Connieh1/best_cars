@@ -1,6 +1,13 @@
 class BestCars::Car
 		attr_accessor :name, :price, :engines, :transmission, :fuel_economy, :weight, :test_results, :url, :comp
 
+	
+	@@all = []
+
+	def self.all
+	  @@all
+	end
+
 	def self.carList
 		self.scrape_cars
 	end
