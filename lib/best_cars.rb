@@ -4,3 +4,4 @@ require "pry"
 require_relative "./best_cars/version"
 require_relative './best_cars/cli'
 require_relative './best_cars/car'
+require_relative './best_cars/scraper'

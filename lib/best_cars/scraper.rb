@@ -9,7 +9,7 @@ class BestCars::Scraper
   	self.index_page.css(".tenbest2018").css("a")
   end
 
-  def car_list
+  def self.car_list
   	scrape_cars.each.with_index(1) do |car, i| 
       puts "#{i}.  #{car.css("span").text}" 
     end
