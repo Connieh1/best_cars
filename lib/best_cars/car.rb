@@ -29,7 +29,35 @@ class BestCars::Car
   	doc ||= Nokogiri::HTML(open(self.url))
   end
 
+  def type
+  	@type = doc.css("td").css("div")[1].text
+  end
 
+  def price
+  	@price = doc.css("td").css("div")[3].text
+  end
+
+  def engine
+    @engine = doc.css("td").css("div")[5].text
+  end
+
+  def transmission
+	@transmission = doc.css("td").css("div")[7].text
+  end
+
+  def fuel_economy
+    @fuel_economy = doc.css("td").css("div")[13].text
+  end
+
+  def weight
+    @weight = doc.css("td").css("div")[9].text
+  end
+
+  def test_results
+    @test_results = doc.css("td").css("div")[11].text
+  end
+
+end
 
 # 	def self.all
 # 	  @@all
