@@ -25,6 +25,9 @@ class BestCars::Car
   	self.all[id]
   end
 
+  def doc
+  	doc ||= Nokogiri::HTML(open(self.url))
+  end
 
 
 
