@@ -21,6 +21,9 @@ class BestCars::Car
   	@@all
   end
 
+  def self.find(id)
+  	self.all[id]
+  end
 
 
 
