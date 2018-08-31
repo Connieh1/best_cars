@@ -9,6 +9,12 @@ class BestCars::Scraper
   	self.index_page.css(".tenbest2018").css("a")
   end
 
+  def car_list
+  	scrape_cars.each.with_index(1) do |car, i| 
+      puts "#{i}.  #{car.css("span").text}" 
+    end
+  end
+
   # def car_sites
   # 	self.scrape_cars.each do |car| 
   # 	  "#{car.attribute("href")}" 
@@ -16,8 +22,8 @@ class BestCars::Scraper
   # end
 
   def make_cars
-  	scrape_cars.each do |cars|
-  	  BestCars::Car.new_from_index_page(r)
+  	scrape_cars.each do |car|
+  	  BestCars::Car.new_from_index_page(car)
   	end
   end
   # def get_page
