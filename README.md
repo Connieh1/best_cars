@@ -1,8 +1,6 @@
 # BestCars
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/best_cars`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to the Best Cars Cli Data Gem! This Cli scrapes Car and Driver for the 10 Best Cars of 2018.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem will give you a list of the 10 Best Cars of 2018 and prompt you to enter the number of the car you would like more information about. The automobile specifications will then be retuned. You may then enter "y" to find out about another automobile or "n" to exit. 
 
 ## Development
 
