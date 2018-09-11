@@ -1,7 +1,7 @@
 require "pry"
 
 class BestCars::Car
-  attr_accessor :name, :price, :engines, :transmission, :fuel_economy, :weight, :test_results, :url, :type, :comp, :website
+  attr_accessor :name, :price, :engines, :transmission, :fuel_economy, :weight, :test_results, :url, :type, :comp, :website, :specs, :doc
 	
   @@all = []
 
@@ -31,7 +31,6 @@ class BestCars::Car
   	@doc ||= Nokogiri::HTML(open(self.url))
   end
 
-
   def type
   	# @type = doc.css("td").css("div")[1].text
   	@type = self.specs[1].text
@@ -53,7 +52,7 @@ class BestCars::Car
   end
 
   def fuel_economy
-    @fuel_economy = doc.css("td").css("div")[13].text
+    # @fuel_economy = doc.css("td").css("div")[13].text
     @fuel_economy = self.specs[13].text
   end
 
@@ -75,6 +74,16 @@ class BestCars::Car
   	@specs = doc.css("td").css("div")
   end
 
+ #  def self.car_specs
+ #  	@type = type
+	# @price = price
+	# @engine = engine
+	# @transmission = transmission
+	# @fuel_economy = fuel_economy
+	# @weight = weight
+	# @test_results = test_results
+	# @website = self.url
+ #  end
 
 
 end

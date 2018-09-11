@@ -38,20 +38,16 @@ class BestCars::CLI
         puts "I don't understand that answer."
         puts "\n"
         start
-   
+      end
     end
-
-
-    end
-
 
     def print_car(car)
       puts "\n"
       puts "#{car.name}"
-      puts "\n"
+      puts "----------------------------------"
       puts "Type:  #{car.type}"
 	  puts "Price:  #{car.price}"
-	  puts "Engine:  #{car.engine}"
+	  puts "Engines:  #{car.engines}"
 	  puts "Transmission: #{car.transmission}"
 	  puts "fuel_economy: #{car.fuel_economy}"
 	  puts "weight:  #{car.weight}"

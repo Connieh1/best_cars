@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
 require './lib/best_cars'
-require "bundler/setup"
-require "best_cars"
+# require "bundler/setup"
+# require "best_cars"
 
 BestCars::CLI.new.call
 
