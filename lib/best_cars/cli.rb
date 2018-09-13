@@ -18,10 +18,15 @@ class BestCars::CLI
       input = gets.strip
       if input.to_i >= 1 && input.to_i <= 10
       car = BestCars::Car.find(input.to_i)
+      if !car.price
+      	BestCars::Scraper.scrape_car_details(car)
+      end
       print_car(car)
 	  elsif input == "exit"
 	  	exit
   	  else
+  	  	puts "\n"
+  	  	puts "I don't uderstand that answer."
   	  	start
   	  end
       puts "\n"
@@ -52,7 +57,7 @@ class BestCars::CLI
 	  puts "fuel_economy: #{car.fuel_economy}"
 	  puts "weight:  #{car.weight}"
 	  puts "test_results:  #{car.test_results}"
-	  puts "website:  #{car.url}"
+	  puts "website:  #{car.website}"
     end
 
 	def list_cars
